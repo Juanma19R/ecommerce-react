@@ -1,11 +1,12 @@
 import Button from '@mui/material/Button';
-import CartWidget from './CartWidget/CartWidget'
+import Logo from '../../assets/images/dark-logo-transparent.svg'
+import CartWidget from '../../components/CartWidget/CartWidget'
 
 function NavBar() {
     return(
         <header className='main-header'>
             <div className='container-logo'>
-                <img src="dark-logo-transparent.svg" className="img-header" alt="logo"/>
+                <img src={Logo} className="img-header" alt="logo"/>
             </div>
             <ul className='navbar'>
                 <li><Button>Inicio</Button></li>
