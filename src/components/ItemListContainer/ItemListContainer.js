@@ -1,10 +1,11 @@
-import Item from '../Items/Item'
+import './ItemListContainer.scss'
 
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
     return(
         <div className="container-items">
-            <Item title='Creamos tu página web' />
-            <Item subtitle='Nuestra misión es ayudarte a modernizar tu negocio, emprendimiento o empresa.' />
+            <div>
+                <h2>{props.greeting}</h2>
+            </div>
         </div>
     )
 }
