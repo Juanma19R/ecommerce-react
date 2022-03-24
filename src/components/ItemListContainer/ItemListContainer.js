@@ -1,11 +1,10 @@
 import './ItemListContainer.scss'
+import ItemCount from '../ItemCount/ItemCount';
 
-const ItemListContainer = (props) => {
+const ItemListContainer = () => {
     return(
         <div className="container-items">
-            <div>
-                <h2>{props.greeting}</h2>
-            </div>
+            <ItemCount stock="3" initial="1" onAdd="onAdd"/>
         </div>
     )
 }
