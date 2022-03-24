@@ -18,10 +18,6 @@ function ItemCount({ stock, initial, onAdd }) {
         }
     }
 
-    onAdd = (count) => { 
-        console.log(`Agregaste ${count} plantillas al carrito.`) 
-    }
-
     return(
         <>
             <div className='ContainerItemCount'>
@@ -33,7 +29,7 @@ function ItemCount({ stock, initial, onAdd }) {
                     </ButtonGroup>
                 </div>
                 <div className='ButtonAddCart'>
-                    <Button variant="outlined" onClick={onAdd}>Agregar al carrito</Button>
+                    <Button variant="outlined" onClick={ () => onAdd(count)}>Agregar al carrito</Button>
                 </div>
             </div>
         </>
