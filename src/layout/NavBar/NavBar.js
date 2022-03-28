@@ -10,7 +10,7 @@ function NavBar() {
             </div>
             <ul className='navbar'>
                 <li><Button>Inicio</Button></li>
-                <li><Button>Plantillas</Button></li>
+                <li><Button>Productos</Button></li>
                 <li><Button>Nosotros</Button></li>
                 <li><Button>Contacto</Button></li>
             </ul>

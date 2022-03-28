@@ -1,15 +1,11 @@
 import './ItemListContainer.scss'
-import ItemCount from '../ItemCount/ItemCount';
+import ItemList from '../ItemList/ItemList';
 
 const ItemListContainer = () => {
 
-    const onAdd = (count) => { 
-        console.log(`Agregaste ${count} plantillas al carrito.`) 
-    }
-
     return(
         <div className="container-items">
-            <ItemCount stock="3" initial="1" onAdd={onAdd}/>
+            <ItemList />
         </div>
     )
 }

@@ -1,0 +1,20 @@
+.item-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 20px 30px;
+    .item-image {
+        width: 240px;
+        margin: auto;
+        display: block;
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+    .item-data {
+        font-size: 1.3rem;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}

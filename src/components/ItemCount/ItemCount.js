@@ -7,12 +7,12 @@ function ItemCount({ stock, initial, onAdd }) {
 
     const [ count, setCount ] = useState(1)
 
-    const addTemplates = () => {
+    const addProduct = () => {
         if(count < stock) {
             setCount(count + 1)
         }
     }
-    const removeTemplates = () => {
+    const removeProduct = () => {
         if(count > initial) {
             setCount(count - 1)
         }
@@ -23,9 +23,9 @@ function ItemCount({ stock, initial, onAdd }) {
             <div className='ContainerItemCount'>
                 <div className='ButtonsGroup'>
                     <ButtonGroup variant="text" aria-label="text button group">
-                        <Button onClick={removeTemplates}>-</Button>
+                        <Button onClick={removeProduct}>-</Button>
                         <Button>{count}</Button>
-                        <Button onClick={addTemplates}>+</Button>
+                        <Button onClick={addProduct}>+</Button>
                     </ButtonGroup>
                 </div>
                 <div className='ButtonAddCart'>
