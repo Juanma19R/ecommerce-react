@@ -1,24 +1,7 @@
-import React, { useState, useEffect } from 'react'
 import './ItemList.scss'
-import { productList } from '../data/data'
 import Item from './Item';
 
-const ItemList = () => {
-    
-    const [products, setProducts] = useState([]);
-
-    const getProducts = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productList)
-            }, 2000);
-        })
-    }
-
-    useEffect( () => {
-        getProducts().then( (data) => {
-            setProducts(data)
-        })}, [])
+const ItemList = ({products}) => {
 
     return (
         <div className="product-list-container">
