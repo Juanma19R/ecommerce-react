@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 450px;
+    height: 550px;
     width: 1200px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
@@ -11,8 +11,11 @@
         display: flex;
         width: 1200px;
         height: auto;
-        img{
-            width: 520px;
+        .img-container{
+            padding-top: 60px;
+            img{
+                width: 520px;
+            }
         }
         .ItemDetail-details{
             padding: 30px;
@@ -22,7 +25,24 @@
             }
             .ItemDetail-price{
                 font-size: 30px;
-                color: blue;
+                color: #1976d2;
+            }
+            .Rating-Fav-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding-bottom: 10px;
+            }
+            .send-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding-top: 10px;
+                p{
+                    font-size: 20px;
+                }
             }
         }
     }
