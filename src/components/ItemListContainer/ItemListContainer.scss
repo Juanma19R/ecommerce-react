@@ -1,5 +1,11 @@
+.container-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px;
+}
 .container-items{
     display: flex;
     justify-content: center;
-    padding-top: 40px;
 }

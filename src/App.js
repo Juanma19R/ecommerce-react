@@ -1,15 +1,32 @@
-import './scss/App.scss';
-import NavBar from './layout/NavBar/NavBar';
-import './layout/NavBar/NavBar.scss'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+//Componentes
+import NavBar from './layout/NavBar/NavBar'
+import Footer from './layout/Footer/Footer'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+//Estilos
+import './scss/App.scss'
+
+//Paginas
+import HomePage from './pages/HomePage'
+import CategoryPage from './pages/CategoryPage'
+import ContactPage from './pages/ContactPage'
+import DetailPage from './pages/DetailPage'
 
 function App() {
   return (
     <div className="App">
-      <NavBar />
-      <ItemListContainer />
-      <ItemDetailContainer />
+      <BrowserRouter>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<HomePage />}/>
+          <Route path="/category" element={<CategoryPage />}/>
+          <Route path="/category/:id" element={<ItemListContainer />}/>
+          <Route path="/item/:id" element={<DetailPage />}/>
+          <Route path="/contacto" element={<ContactPage />}/>
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

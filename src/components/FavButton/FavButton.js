@@ -1,4 +1,4 @@
-import * as React from 'react';
+//Componentes
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
 import FavoriteIcon from '@mui/icons-material/Favorite';

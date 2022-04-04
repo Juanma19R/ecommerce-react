@@ -1,0 +1,21 @@
+.category-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 400px;
+    width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    .category-image {
+        width: 240px;
+        margin: auto;
+        display: block;
+        padding-top: 15px;
+        padding-bottom: 30px;
+    }
+    .title-container{
+        font-size: medium;
+    }
+}

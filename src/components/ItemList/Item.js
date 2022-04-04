@@ -1,5 +1,10 @@
-import ItemCount from '../ItemCount/ItemCount';
-import './Item.scss';
+//Componentes
+import ItemCount from '../ItemCount/ItemCount'
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+
+//Estilos
+import './Item.scss'
 
 const Item = ({ name, pictureUrl, price, id, stock }) => {
     const onAdd = (count) => {
@@ -12,8 +17,11 @@ const Item = ({ name, pictureUrl, price, id, stock }) => {
             <h3 className="item-data">{name}</h3>
             <p className="item-data">${price}</p>
             <ItemCount stock={stock} onAdd={onAdd} initial={1} />
+            <div className='container-btnDetail'>
+                <Link to={`/item/${id}`}><Button variant="outlined">Detalle</Button></Link>
+            </div>
         </div>
     );
-};
+}
 
 export default Item;

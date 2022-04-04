@@ -1,8 +1,11 @@
-import './ItemDetail.scss'
-import ItemCount from '../ItemCount/ItemCount';
-import HalfRating from '../HalfRating/HalfRating';
+//Componentes
+import ItemCount from '../ItemCount/ItemCount'
+import HalfRating from '../HalfRating/HalfRating'
 import FloatingActionButtonSize from '../FavButton/FavButton'
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping'
+
+//Estilos
+import './ItemDetail.scss'
 
 const ItemDetail = ({item}) => {
     const {name, pictureUrl, price, detail, stock} = item;
@@ -25,9 +28,9 @@ const ItemDetail = ({item}) => {
                         <p><LocalShippingIcon color='primary'/> ¡Envios a todo el país!</p>
                     </div>
                 </div>
-        </div>
+            </div>
         </div>
     );
-};
+}
 
 export default ItemDetail;

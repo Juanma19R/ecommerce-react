@@ -1,9 +1,12 @@
-import './ItemCount.scss'
+//Componentes
 import React, { useState } from 'react'
 import ButtonGroup from '@mui/material/ButtonGroup'
 import Button from '@mui/material/Button'
 
-function ItemCount({ stock, initial, onAdd }) {
+//Estilos
+import './ItemCount.scss'
+
+function ItemCount({ stock, initial, onAdd, id }) {
 
     const [ count, setCount ] = useState(1)
 
@@ -18,7 +21,7 @@ function ItemCount({ stock, initial, onAdd }) {
         }
     }
 
-    return(
+    return (
         <>
             <div className='ContainerItemCount'>
                 <div className='ButtonsGroup'>
@@ -33,7 +36,7 @@ function ItemCount({ stock, initial, onAdd }) {
                 </div>
             </div>
         </>
-    )
+    );
 }
 
 export default ItemCount

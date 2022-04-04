@@ -1,11 +1,12 @@
+//Componentes
 import React, { useState, useEffect } from 'react'
-import { productList } from '../../data/data'
+import { productList } from '../../data/ProductListMock'
 import ItemDetail from './ItemDetail'
+
+//Estilos
 import './ItemDetailContainer.scss'
 
-const ItemDetailContainer = () => {
-
-    const itemID = 3;
+const ItemDetailContainer = ({id}) => {
 
     const [item, setItem] = useState([]);
 
@@ -19,9 +20,9 @@ const ItemDetailContainer = () => {
 
     useEffect( () => {
         getProducts().then( (data) => {
-            const itemFound = data.find(element => element.id === itemID)
+            const itemFound = data.find(element => element.id == id)
             setItem(itemFound)
-        })}, []);
+        })});
 
     return (      
         <div className='ItemDetailContainer-container'>

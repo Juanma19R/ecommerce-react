@@ -1,9 +1,12 @@
-.product-list-container {
+.container-form{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
     text-align: center;
-    gap: 30px;
-    margin: 40px;
+    h2{
+        padding: 25px;
+    }
+    Button{
+        margin: 25px;
+    }
 }
