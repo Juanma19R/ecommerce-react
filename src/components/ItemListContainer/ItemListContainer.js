@@ -12,10 +12,9 @@ const ItemListContainer = () => {
     const [products, setProducts] = useState([]);
     
     const {category} = useParams();
-    console.log({products})
 
     const getProducts = () => {
-        return new Promise((resolve, reject) => {
+        return new Promise ((resolve, reject) => {
             setTimeout(() => {
                 resolve(productList)
             }, 2000);

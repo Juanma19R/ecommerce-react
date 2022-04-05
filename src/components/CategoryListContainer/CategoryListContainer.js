@@ -11,11 +11,11 @@ const CategoryListContainer = () => {
     const [categories, setCategories] = useState([]);
     
     const getCatergories = () => {
-        let promise = new Promise ((resolve, reject)=>{
-            setTimeout( () => {resolve (CategoriesMock)}, 2000);
+        return new Promise ((resolve, reject) => {
+            setTimeout(() => {
+                resolve (CategoriesMock)
+            }, 2000);
         });
-        let result = promise;
-        return (result);
     }
     
     useEffect( () => {

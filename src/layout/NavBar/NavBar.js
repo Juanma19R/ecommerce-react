@@ -12,7 +12,7 @@ function NavBar() {
     return (
         <header className='main-header'>
             <div className='container-logo'>
-                <img src={Logo} className="img-header" alt="logo"/>
+                <Link to={'/'}><img src={Logo} className="img-header" alt="logo"/></Link>
             </div>
             <ul className='navbar'>
                 {pages.map( (page, index) => {
