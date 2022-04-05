@@ -35,4 +35,4 @@ Detalle\
 
 ## GIF navegación
 
-<img src ="/assets/images/navegacion.gif" alt="Gif de navegacion" width="400">
+<img src="https://i.imgur.com/DtR1A8G.gif" alt="Gif de navegacion" width="400">
