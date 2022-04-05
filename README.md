@@ -3,13 +3,36 @@
 Nuestra web tiene la intención de acercarte la electronica a tu hogar, ¡Sin importar donde te encuentres!/
 Tu tienda online de confianza, donde encontras lo mejor en Laptops, Accesorios para tu pc y Monitores./
 
-### Tecnologías
+### Explora la web
 
-<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB">
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-<img src="https://img.shields.io/badge/SCSS-1572B6?style=for-the-badge&logo=scss&logoColor=white">
-<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
+Clic aquí, para ver nuestra web [Mision-TI](/https://juanma19r.github.io/ecommerce-react/)
+
+### Tecnologías usadas
 
 - Visual Studio Code
+- React 
+- Javascript
+- Html5
+- Scss
 - npm
-- mui
+- Mui
+- Git & GitHub
+
+### Screenshots 
+
+Home
+<img src ="https://i.imgur.com/78GLuyO.png" alt="página de bienvenida" width="400"/>
+<img src ="https://i.imgur.com/yR059GI.png" alt="página de bienvenida" width="400"/>
+
+Categorías
+<img src ="https://i.imgur.com/F0pQzmX.png" alt="página de bienvenida" width="400"/>
+
+Categorías > Monitores
+<img src ="https://i.imgur.com/0BsnCNB.png" alt="página de bienvenida" width="400"/>
+
+Detalle
+<img src ="https://i.imgur.com/L8FPlyf.png" alt="página de bienvenida" width="400"/>
+
+
+
+
