@@ -1,6 +1,6 @@
+import { useParams } from "react-router-dom"
 //Componentes
 import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer'
-import { useParams } from "react-router-dom"
 
 const DetailPage = () => {
     

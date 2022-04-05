@@ -1,7 +1,7 @@
-//Componentes
 import React, { useState, useEffect } from "react"
+//Componentes
 import CategoryList from "../CategoryList/CategoryList"
-import CategoriesMock from '../../data/CategoriesMock'
+import getCategories from "../../helpers/getCategories"
 
 //Estilos
 import './CategoryListContainer.scss'
@@ -9,20 +9,15 @@ import './CategoryListContainer.scss'
 const CategoryListContainer = () => {
 
     const [categories, setCategories] = useState([]);
-    
-    const getCatergories = () => {
-        return new Promise ((resolve, reject) => {
-            setTimeout(() => {
-                resolve (CategoriesMock)
-            }, 2000);
-        });
-    }
-    
-    useEffect( () => {
-        getCatergories().then( (datacategories) => {
-            setCategories(datacategories)
-        })},[]);
 
+    useEffect( () => {
+        getCategories().then( (datacategories) => {
+            setCategories(datacategories)
+        })
+        return () => {
+            setCategories({});
+        }},[]);
+        
     return (
         <div>
             <h1 className="categories-title">Nuestras Categorías</h1>

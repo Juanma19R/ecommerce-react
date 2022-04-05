@@ -1,5 +1,5 @@
-//Componentes
 import React, { useState } from 'react'
+//Componentes
 import ButtonGroup from '@mui/material/ButtonGroup'
 import Button from '@mui/material/Button'
 
@@ -43,4 +43,4 @@ function ItemCount({ stock, initial }) {
     );
 }
 
-export default ItemCount
+export default ItemCount;

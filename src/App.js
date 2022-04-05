@@ -1,8 +1,8 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 //Componentes
 import NavBar from './layout/NavBar/NavBar'
-import Footer from './layout/Footer/Footer'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Footer from './layout/Footer/Footer'
 
 //Estilos
 import './scss/App.scss'

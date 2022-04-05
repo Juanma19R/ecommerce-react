@@ -1,7 +1,7 @@
-//Componentes
 import React, { useState, useEffect } from 'react'
-import { productList } from '../../data/ProductListMock'
+//Componentes
 import ItemDetail from './ItemDetail'
+import getProducts from '../../helpers/getProducts'
 
 //Estilos
 import './ItemDetailContainer.scss'
@@ -10,19 +10,14 @@ const ItemDetailContainer = ({id}) => {
 
     const [item, setItem] = useState([]);
 
-    const getProducts = () => {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productList)
-            }, 2000);
-        })
-    }
-
     useEffect( () => {
         getProducts().then( (data) => {
             const itemFound = data.find(element => element.id == id)
             setItem(itemFound)
-        })});
+        })
+        return () => {
+            setItem({});
+        }}, []);
 
     return (      
         <div className='ItemDetailContainer-container'>

@@ -1,9 +1,9 @@
+import { Link } from 'react-router-dom' 
 //Componentes
-import Button from '@mui/material/Button'
+import pages from '../../data/PagesMock'
 import Logo from '../../assets/images/dark-logo-transparent.svg'
 import CartWidget from '../../components/CartWidget/CartWidget'
-import pages from '../../data/PagesMock'
-import { Link } from 'react-router-dom' 
+import Button from '@mui/material/Button'
 
 //Estilos
 import './NavBar.scss'

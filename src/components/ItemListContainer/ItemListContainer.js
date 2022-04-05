@@ -1,8 +1,8 @@
+import React, { useState, useEffect } from 'react'
+import { useParams } from "react-router-dom"
 //Componentes
 import ItemList from '../ItemList/ItemList'
-import React, { useState, useEffect } from 'react'
-import { productList } from '../../data/ProductListMock'
-import { useParams } from "react-router-dom"
+import getProducts from '../../helpers/getProducts'
 
 //Estilos
 import './ItemListContainer.scss'
@@ -13,18 +13,14 @@ const ItemListContainer = () => {
     
     const {category} = useParams();
 
-    const getProducts = () => {
-        return new Promise ((resolve, reject) => {
-            setTimeout(() => {
-                resolve(productList)
-            }, 2000);
+    useEffect( () => {
+        getProducts().then( (products) => {
+            category ? setProducts( products.filter( (product) => product.category === category)):
+            setProducts(products)
         })
-    }
-
-    useEffect( () => {  
-        getProducts().then( (products) => {              
-            category ? setProducts( products.filter( (product) => product.category === category)): 
-            setProducts(products)})},[category]);
+        return () => {
+            setProducts({});
+        }},[category]);
 
     return (
         <> 
