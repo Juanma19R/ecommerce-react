@@ -3,11 +3,11 @@
 Nuestra web tiene la intención de acercarte la electronica a tu hogar, ¡Sin importar donde te encuentres!/
 Tu tienda online de confianza, donde encontras lo mejor en Laptops, Accesorios para tu pc y Monitores./
 
-### Explora la web
+## Explora la web
 
 Clic aquí, para ver nuestra web [Mision-TI](/https://juanma19r.github.io/ecommerce-react/)
 
-### Tecnologías usadas
+## Tecnologías usadas
 
 - Visual Studio Code
 - React 
@@ -18,19 +18,19 @@ Clic aquí, para ver nuestra web [Mision-TI](/https://juanma19r.github.io/ecomme
 - Mui
 - Git & GitHub
 
-### Screenshots 
+## Screenshots 
 
-Home
-<img src ="https://i.imgur.com/78GLuyO.png" alt="página de bienvenida" width="400"/>
+Home\
+<img src ="https://i.imgur.com/78GLuyO.png" alt="página de bienvenida" width="400"/>\
 <img src ="https://i.imgur.com/yR059GI.png" alt="página de bienvenida" width="400"/>
 
-Categorías
+Categorías\
 <img src ="https://i.imgur.com/F0pQzmX.png" alt="página de bienvenida" width="400"/>
 
-Categorías > Monitores
+Categorías > Monitores\
 <img src ="https://i.imgur.com/0BsnCNB.png" alt="página de bienvenida" width="400"/>
 
-Detalle
+Detalle\
 <img src ="https://i.imgur.com/L8FPlyf.png" alt="página de bienvenida" width="400"/>
 
 
