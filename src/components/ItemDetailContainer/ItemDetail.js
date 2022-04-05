@@ -8,7 +8,9 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping'
 import './ItemDetail.scss'
 
 const ItemDetail = ({item}) => {
-    const {name, pictureUrl, price, detail, stock} = item;
+
+    const {name, pictureUrl, price, detail, stock, onAdd} = item;
+    
     return (
         <div className="ItemDetail-container">
             <div className="Item-container">
@@ -23,7 +25,7 @@ const ItemDetail = ({item}) => {
                         <FloatingActionButtonSize />
                     </div>
                     <p>{detail}</p>
-                    <ItemCount stock={stock} initial={1} />
+                    <ItemCount stock={stock} onAdd={onAdd} initial={1} />
                     <div className='send-container'>
                         <p><LocalShippingIcon color='primary'/> ¡Envios a todo el país!</p>
                     </div>

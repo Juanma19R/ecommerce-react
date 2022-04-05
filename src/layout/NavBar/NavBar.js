@@ -15,9 +15,9 @@ function NavBar() {
                 <img src={Logo} className="img-header" alt="logo"/>
             </div>
             <ul className='navbar'>
-                {pages.map( (page) => {
+                {pages.map( (page, index) => {
                     return (
-                        <li>
+                        <li key={index}>
                             <Button>
                                 <Link to={page.url}>{page.title}</Link>
                             </Button>

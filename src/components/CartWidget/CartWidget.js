@@ -1,6 +1,6 @@
 //Componentes
-import { FiShoppingBag } from 'react-icons/fi';
-import Badge from '@mui/material/Badge';
+import { FiShoppingBag } from 'react-icons/fi'
+import Badge from '@mui/material/Badge'
 
 const CartWidget = () => {
     return (

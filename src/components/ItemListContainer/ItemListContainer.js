@@ -2,7 +2,7 @@
 import ItemList from '../ItemList/ItemList'
 import React, { useState, useEffect } from 'react'
 import { productList } from '../../data/ProductListMock'
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"
 
 //Estilos
 import './ItemListContainer.scss'
@@ -10,7 +10,9 @@ import './ItemListContainer.scss'
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([]);
-    const {id} = useParams();
+    
+    const {category} = useParams();
+    console.log({products})
 
     const getProducts = () => {
         return new Promise((resolve, reject) => {
@@ -20,19 +22,10 @@ const ItemListContainer = () => {
         })
     }
 
-    useEffect( () => {
-        setProducts([])
-        getProducts().then( (data) => {
-            id ? filterCategory(data, id) : setProducts(data)
-        })},[id]);
-
-    const filterCategory = (array, category) =>{
-        return array.map( (product, i) => {
-            if(product.type == category) {
-                return setProducts(products => [...products, product])
-            }
-        });
-    }
+    useEffect( () => {  
+        getProducts().then( (products) => {              
+            category ? setProducts( products.filter( (product) => product.category === category)): 
+            setProducts(products)})},[category]);
 
     return (
         <> 

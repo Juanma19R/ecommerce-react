@@ -6,7 +6,11 @@ import Button from '@mui/material/Button'
 //Estilos
 import './ItemCount.scss'
 
-function ItemCount({ stock, initial, onAdd, id }) {
+function ItemCount({ stock, initial }) {
+
+    const onAdd = (count) => {
+        console.log(`Agregaste ${count} productos al  carrito`);
+    };
 
     const [ count, setCount ] = useState(1)
 

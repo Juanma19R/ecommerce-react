@@ -1,8 +1,8 @@
 //Componentes
-import Container from '@mui/material/Container';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
+import Container from '@mui/material/Container'
+import TextField from '@mui/material/TextField'
+import Button from '@mui/material/Button'
+import SendIcon from '@mui/icons-material/Send'
 
 //Estilos
 import './ContactPage.scss'

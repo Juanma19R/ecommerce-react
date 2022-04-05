@@ -6,11 +6,8 @@ import { Link } from 'react-router-dom';
 //Estilos
 import './Item.scss'
 
-const Item = ({ name, pictureUrl, price, id, stock }) => {
-    const onAdd = (count) => {
-        console.log(`Agregaste ${count} productos al  carrito`);
-    };
-
+const Item = ({ name, pictureUrl, price, id, stock, onAdd }) => {
+    
     return (
         <div className="item-container">
             <img className="item-image" src={pictureUrl} alt="" />

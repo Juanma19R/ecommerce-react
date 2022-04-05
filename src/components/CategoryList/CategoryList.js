@@ -1,32 +1,14 @@
 //Componentes
-import React, { useState, useEffect } from "react"
-import Category from './Category';
-import CategoriesMock from '../../data/CategoriesMock'
+import Category from './Category'
 
 //Estilos
 import './CategoryList.scss'
 
-const CategoryList = () => {
-
-    const [categories, setCategories] = useState([]);
-    
-    const getCatergories = () => {
-        let promise = new Promise ((resolve, reject)=>{
-            setTimeout(() => {resolve (CategoriesMock)}, 2000);
-        });
-        let result = promise;
-        return (result);
-    }
-    
-    useEffect( () => {
-        getCatergories().then( (datacategories) => {
-            setCategories(datacategories)
-        })},[]);
-    
-    return(
+const CategoryList = ({categories}) => {    
+    return (
         <div className="categories-container">
             {categories.map((category)=>{
-                return(
+                return (
                     <Category data={category} key={category.id}/>
                 );
             })}
