@@ -1,51 +1,51 @@
 # Getting Started with Create React App | Primeros pasos con la aplicación Create React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
-Este proyecto se inició con [Create React App](https://github.com/facebook/create-react-app).\
+Este proyecto se inició con [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts | Scripts disponibles
 
 In the project directory, you can run:\
-En el directorio del proyecto, puede ejecutar:\
+En el directorio del proyecto, puede ejecutar:
 
 ### `npm start`
 
 Runs the app in the development mode.\
 Ejecuta la aplicación en el modo de desarrollo.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
-Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.\
+Abra [http://localhost:3000](http://localhost:3000) para verlo en su navegador.
 
 The page will reload when you make changes.\
 La página se volverá a cargar cuando realice cambios.\
 You may also see any lint errors in the console.\
-También puede ver los errores en la consola.\
+También puede ver los errores en la consola.
 
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
 Inicia el corredor de prueba en el modo de reloj interactivo.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.\
-Consulte la sección sobre [running tests](https://facebook.github.io/create-react-app/docs/running-tests) para obtener más información.\
+Consulte la sección sobre [running tests](https://facebook.github.io/create-react-app/docs/running-tests) para obtener más información.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 Construye la aplicación para producción en la carpeta `build`.\
 It correctly bundles React in production mode and optimizes the build for the best performance.\
-Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.\
+Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.
 
 The build is minified and the filenames include the hashes.\
 La compilación se minimiza y los nombres de archivo incluyen los hashes.\
 Your app is ready to be deployed!.\
-¡Tu aplicación está lista para ser implementada!.\
+¡Tu aplicación está lista para ser implementada!.
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.\
-Consulte la sección sobre [deployment](https://facebook.github.io/create-react-app/docs/deployment) para obtener más información.\
+Consulte la sección sobre [deployment](https://facebook.github.io/create-react-app/docs/deployment) para obtener más información.
 
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**\
-**Nota: esta es una operación unidireccional. Una vez que `eject`, no puedes volver atrás!**\
+**Nota: esta es una operación unidireccional. Una vez que `eject`, no puedes volver atrás!**
 
 If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.\
 Si no está satisfecho con la herramienta de compilación y las opciones de configuración, puede `eject` en cualquier momento. Este comando eliminará la dependencia de compilación única de su proyecto.\
