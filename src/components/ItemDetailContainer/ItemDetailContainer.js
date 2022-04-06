@@ -17,7 +17,7 @@ const ItemDetailContainer = ({id}) => {
         })
         return () => {
             setItem({});
-        }}, []);
+        }}, [id]);
 
     return (      
         <div className='ItemDetailContainer-container'>

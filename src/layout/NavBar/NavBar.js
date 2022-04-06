@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom' 
 //Componentes
-import pages from '../../data/PagesMock'
+import pages from '../../data/pagesMock'
 import Logo from '../../assets/images/dark-logo-transparent.svg'
 import CartWidget from '../../components/CartWidget/CartWidget'
 import Button from '@mui/material/Button'

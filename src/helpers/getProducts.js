@@ -1,4 +1,4 @@
-import { productList } from "../data/ProductListMock";
+import { productList } from "../data/productListMock";
 
 const getProducts = () => {
     return new Promise((resolve, reject) => {

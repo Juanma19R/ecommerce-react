@@ -1,4 +1,4 @@
-import mockCategories from "../data/CategoriesMock";
+import mockCategories from "../data/categoriesMock";
 
 const getCategories = () => {
     return new Promise ((resolve, reject) => {
