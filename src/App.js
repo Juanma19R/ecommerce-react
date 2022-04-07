@@ -12,6 +12,7 @@ import HomePage from './pages/HomePage'
 import CategoryPage from './pages/CategoryPage'
 import ContactPage from './pages/ContactPage'
 import DetailPage from './pages/DetailPage'
+import Cart from './pages/Cart'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/category/:category" element={<ItemListContainer />}/>
           <Route path="/item/:id" element={<DetailPage />}/>
           <Route path="/contacto" element={<ContactPage />}/>
+          <Route path="/cart" element={<Cart />}/>
         </Routes>
         <Footer />
       </BrowserRouter>

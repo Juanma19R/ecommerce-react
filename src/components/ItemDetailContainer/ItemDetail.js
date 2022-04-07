@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 //Componentes
 import ItemCount from '../ItemCount/ItemCount'
 import HalfRating from '../HalfRating/HalfRating'
@@ -6,10 +7,11 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping'
 
 //Estilos
 import './ItemDetail.scss'
+import { Button } from '@mui/material'
 
 const ItemDetail = ({item}) => {
 
-    const {name, pictureUrl, price, detail, stock, onAdd} = item;
+    const {name, pictureUrl, price, detail, stock, onAdd, newProduct} = item;
     
     return (
         <div className="ItemDetail-container">
@@ -19,13 +21,24 @@ const ItemDetail = ({item}) => {
                 </div>
                 <div className='ItemDetail-details'>
                     <h2 className='ItemDetail-title'>{name}</h2>             
-                    <span className='ItemDetail-price'><b>$ {price}</b></span>
+                    <span className='ItemDetail-price'><b>usd ${price}</b></span>
                     <div className='Rating-Fav-container'>
                         <HalfRating /> 
                         <FloatingActionButtonSize />
                     </div>
                     <p>{detail}</p>
-                    <ItemCount stock={stock} onAdd={onAdd} initial={1} />
+                    <div>
+                        {
+                            newProduct ?
+                                <div>
+                                    <ItemCount stock={stock} onAdd={onAdd} initial={1} />
+                                </div>
+                            : 
+                                <div className='btnIrAlCarrito'>
+                                    <Link to={'/Cart'}><Button variant="outlined">Ir al carrito</Button></Link>
+                                </div>
+                            }
+                    </div>
                     <div className='send-container'>
                         <p><LocalShippingIcon color='primary'/> ¡Envios a todo el país!</p>
                     </div>

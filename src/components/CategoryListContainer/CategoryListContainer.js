@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 //Componentes
 import CategoryList from "../CategoryList/CategoryList"
+import CircularProgress from '@mui/material/CircularProgress'
+import Box from '@mui/material/Box'
 import getCategories from "../../helpers/getCategories"
 
 //Estilos
@@ -19,10 +21,18 @@ const CategoryListContainer = () => {
         }},[]);
         
     return (
-        <div>
-            <h1 className="categories-title">Nuestras Categorías</h1>
-            <CategoryList categories={categories}/>
-        </div>
+        <>
+            {categories.length === 0 ? (
+                <Box className='loader'>
+                    <CircularProgress />
+                </Box>
+            ) : (
+            <div>
+                <h1 className="categories-title">Nuestras Categorías</h1>
+                <CategoryList categories={categories}/>
+            </div>
+            )}
+        </>
     );
 }
 

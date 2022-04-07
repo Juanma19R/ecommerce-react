@@ -8,11 +8,15 @@ import './ItemCount.scss'
 
 function ItemCount({ stock, initial }) {
 
-    const onAdd = (count) => {
-        console.log(`Agregaste ${count} productos al  carrito`);
-    };
-
     const [ count, setCount ] = useState(1)
+    const [ newProduct, setNewProduct] = useState(true)
+
+    const onAdd = (count) => {
+        if (count > 0 ){
+            setNewProduct(!newProduct)
+        }
+        console.log(`Agregaste ${count} productos al  carrito`)
+    };
 
     const addProduct = () => {
         if(count < stock) {
@@ -36,7 +40,7 @@ function ItemCount({ stock, initial }) {
                     </ButtonGroup>
                 </div>
                 <div className='ButtonAddCart'>
-                    <Button variant="outlined" onClick={ () => onAdd(count)}>Agregar al carrito</Button>
+                    <Button variant="outlined" onClick={ () => onAdd(count)}>Comprar</Button>
                 </div>
             </div>
         </>

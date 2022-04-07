@@ -7,6 +7,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     padding: 0 20px;
+    transition: all 0.3s ease;
     .item-image {
         width: 240px;
         margin: auto;
@@ -25,4 +26,7 @@
         align-items: center;
         padding-bottom: 20px;
     }
+}
+.item-container:hover {
+    transform: scale(1.05);
 }

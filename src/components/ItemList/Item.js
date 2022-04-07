@@ -12,7 +12,7 @@ const Item = ({ name, pictureUrl, price, id, stock, onAdd }) => {
         <div className="item-container">
             <img className="item-image" src={pictureUrl} alt="" />
             <h3 className="item-data">{name}</h3>
-            <p className="item-data">${price}</p>
+            <p className="item-data">usd ${price}</p>
             <ItemCount stock={stock} onAdd={onAdd} initial={1} />
             <div className='container-btnDetail'>
                 <Link to={`/item/${id}`}><Button variant="outlined">Detalle</Button></Link>
