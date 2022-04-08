@@ -12,11 +12,11 @@ export const productList = [
     {
         id: 2,
         category: 'accesorios',
-        name: 'Auriculares BlueParrott B550-XT',
-        detail: 'Auriculares Bluetooth con control por voz, sonido líder en la industria con largo alcance inalámbrico, comodidad extrema y hasta 24 horas de tiempo de conversación',
-        price: 199,
+        name: 'Joystick de Xbox Series X/S',
+        detail: 'Joystick con cable mejorado PowerA para Xbox Series X/S - Negro, Gamepad, Controlador de videojuegos con cable.',
+        price: 125,
         pictureUrl:
-        'https://m.media-amazon.com/images/I/71v-HV8CMkL._AC_SL1500_.jpg',
+        'https://m.media-amazon.com/images/I/71Ud89DvqiL._SL1500_.jpg',
         stock: 10
     },
     {
@@ -72,7 +72,7 @@ export const productList = [
     {
         id: 8,
         category: 'accesorios',
-        name: 'Auriculares inalámbricos HyperX Cloud Stinger Core',
+        name: 'Auriculares HyperX Cloud Stinger Core',
         detail: 'Auriculares inalámbricos para juegos, para PC, sonido envolvente 7.1, micrófono con cancelación de ruido, ligero',
         price: 79,
         pictureUrl:
@@ -81,13 +81,13 @@ export const productList = [
     },
     {
         id: 9,
-        category: 'accesorios',
-        name: 'Logitech Brio webcam Ultra HD',
-        detail: 'webcam Ultra HD para videoconferencias, grabación de videos y transmisión',
-        price: 144,
+        category: 'laptops',
+        name: 'Razer Blade 15 Gaming Laptop',
+        detail: 'Razer Blade 15 Gaming Laptop 2019: Intel Core i7-9750H 6 Core - GeForce GTX 1660Ti - 15.6" FHD 1080p 144Hz - 16GB RAM - 256GB SSD + 1TB, aluminio CNC, Chroma RGB Lighting, Thunderbolt 4',
+        price: 1.495,
         pictureUrl:
-        'https://m.media-amazon.com/images/I/61OQP2+yqML._AC_SL1500_.jpg',
-        stock: 5 
+        'https://m.media-amazon.com/images/I/81+l7hSFLYL._AC_SL1500_.jpg',
+        stock: 3 
     },
     {
         id: 10,
@@ -102,7 +102,7 @@ export const productList = [
     {
         id: 11,
         category: 'accesorios',
-        name: 'Logitech MK270 Combo de teclado y mouse inalámbricos',
+        name: 'Logitech MK270 teclado y mouse inalámbricos',
         detail: 'teclado y mouse inalámbricos para Windows, 2,4 GHz inalámbrico, mouse compacto, 8 teclas multimedia y acceso directo, batería de 2 años, para PC, portátil, negro',
         price: 29,
         pictureUrl:
