@@ -6,17 +6,9 @@ import Button from '@mui/material/Button'
 //Estilos
 import './ItemCount.scss'
 
-function ItemCount({ stock, initial }) {
+const ItemCount = ({ stock, initial, action }) => {
 
-    const [ count, setCount ] = useState(1)
-    const [ newProduct, setNewProduct] = useState(true)
-
-    const onAdd = (count) => {
-        if (count > 0 ){
-            setNewProduct(!newProduct)
-        }
-        console.log(`Agregaste ${count} productos al  carrito`)
-    };
+    const [ count, setCount ] = useState(initial)
 
     const addProduct = () => {
         if(count < stock) {
@@ -24,7 +16,7 @@ function ItemCount({ stock, initial }) {
         }
     }
     const removeProduct = () => {
-        if(count > initial) {
+        if(count > 0) {
             setCount(count - 1)
         }
     }
@@ -39,8 +31,8 @@ function ItemCount({ stock, initial }) {
                         <Button onClick={addProduct}>+</Button>
                     </ButtonGroup>
                 </div>
-                <div className='ButtonAddCart'>
-                    <Button variant="outlined" onClick={ () => onAdd(count)}>Comprar</Button>
+                <div className='btnBuy'>
+                    <Button variant="outlined" onClick={ (e) => action(e, count)}>Comprar</Button>
                 </div>
             </div>
         </>

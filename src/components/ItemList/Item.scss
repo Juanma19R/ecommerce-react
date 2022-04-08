@@ -5,10 +5,11 @@
     height: 600px;
     width: 400px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 5px;
+    border-radius: 12px;
     padding: 0 20px;
     transition: all 0.3s ease;
-    .item-image {
+    background-color: #fff;
+    img {
         width: 240px;
         margin: auto;
         display: block;
@@ -19,6 +20,9 @@
         font-size: 1.3rem;
         text-align: center;
         padding-bottom: 10px;
+    }
+    .btnIrAlCarrito{
+        padding: 20px;
     }
     .container-btnDetail{
         display: flex;
