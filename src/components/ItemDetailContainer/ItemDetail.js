@@ -1,14 +1,15 @@
 import { Link } from 'react-router-dom'
-import React,{ useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 //Componentes
 import ItemCount from '../ItemCount/ItemCount'
+import { useCartContext } from '../../context/CartContext'
 import HalfRating from '../HalfRating/HalfRating'
 import FloatingActionButtonSize from '../FavButton/FavButton'
 import LocalShippingIcon from '@mui/icons-material/LocalShipping'
+import { Button } from '@mui/material'
 
 //Estilos
 import './ItemDetail.scss'
-import { Button } from '@mui/material'
 
 const ItemDetail = ({item}) => {
 
@@ -16,15 +17,17 @@ const ItemDetail = ({item}) => {
 
     const [counter, setCounter] = useState(0);
     const [showItemCount, setShowItemCount] = useState(true);
+    const { addToCart } = useCartContext();
 
     const onAdd = (e, count) => {
+        addToCart( {...item, quantity: count})
         if(!!e & counter<1){
             setCounter(count);
         }
     }
 
     useEffect( () => {
-        if(counter>0) {
+        if(counter > 0) {
             setShowItemCount(false);
             console.log("Productos agregados al carrito: ", counter);
         }
@@ -53,6 +56,7 @@ const ItemDetail = ({item}) => {
                                 ) : (
                                 <div className='btnIrAlCarrito'>
                                     <Link to={'/Cart'}><Button variant="outlined">Ir al carrito</Button></Link>
+                                    <Link to={'/'}><Button variant="outlined">Seguir comprando</Button></Link>
                                 </div>
                                 )
                         }

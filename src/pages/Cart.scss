@@ -1,0 +1,17 @@
+.Checkout-container{
+    text-align: center;
+    padding: 20px;
+    .NoItems-container{
+        padding: 20px;
+        Button{
+            margin: 10px;
+        }
+    }
+    .btnVolver-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+}
+

@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 //Componentes
 import Button from '@mui/material/Button'
 import HalfRating from '../HalfRating/HalfRating'

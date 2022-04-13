@@ -15,6 +15,7 @@ const ItemCount = ({ stock, initial, action }) => {
             setCount(count + 1)
         }
     }
+    
     const removeProduct = () => {
         if(count > 0) {
             setCount(count - 1)
@@ -32,7 +33,7 @@ const ItemCount = ({ stock, initial, action }) => {
                     </ButtonGroup>
                 </div>
                 <div className='btnBuy'>
-                    <Button variant="outlined" onClick={ (e) => action(e, count)}>Comprar</Button>
+                    <Button variant="outlined" onClick={ (e) => action(e, count)}>Agregar al carrito</Button>
                 </div>
             </div>
         </>

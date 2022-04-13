@@ -1,12 +1,17 @@
+import { Link } from 'react-router-dom'
 //Componentes
+import { useCartContext } from '../../context/CartContext'
 import { FiShoppingBag } from 'react-icons/fi'
-import Badge from '@mui/material/Badge'
 
 const CartWidget = () => {
+    const { quantity, cartList } = useCartContext();
     return (
-        <Badge badgeContent={2} color="primary">          
-            <FiShoppingBag size={30}/>
-        </Badge>
+        <div>
+            <Link to='/Cart'>          
+                <FiShoppingBag size={30}/>
+            </Link>
+            { cartList.length > 0 && quantity() }
+        </div>
     );
 }
 

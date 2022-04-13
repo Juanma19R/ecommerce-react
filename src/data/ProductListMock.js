@@ -22,7 +22,7 @@ export const productList = [
     {
         id: 3,
         category: 'laptops',
-        name: 'Notebook Acer Aspire 5 A515-56-36UT',
+        name: 'Notebook Acer Aspire 5',
         detail: 'Laptop delgada con procesador Intel Core i3-1115G4 de 11.ª generación, pantalla Full HD de 15.6 pulgadas, memoria DDR4 de 4 GB, unidad de estado sólido SSD NVMe de 128 GB, WiFi 6, Amazon Alexa, Windows 10 Home',
         price: 360,
         pictureUrl:
@@ -32,7 +32,7 @@ export const productList = [
     {
         id: 4,
         category: 'monitores',
-        name: 'Monitor ViewSonic OMNI VX2418-P-MHD',
+        name: 'Monitor ViewSonic OMNI',
         detail: 'Monitor de juegos 24 pulgadas 1080p 1ms 165Hz con sincronización adaptativa, cuidado de los ojos, HDMI y DisplayPort',
         price: 189,
         pictureUrl:
