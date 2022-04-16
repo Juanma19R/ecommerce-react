@@ -33,7 +33,7 @@ const CategoryListContainer = () => {
             </div>
             )}
         </>
-    );
+    )
 }
 
 export default CategoryListContainer;

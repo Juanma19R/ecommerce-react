@@ -1,4 +1,3 @@
-//Componentes
 import { Link } from 'react-router-dom'
 
 //Estilos
@@ -17,7 +16,7 @@ const Category = ({ data }) => {
                 <h3>{title}</h3>
             </div>
         </div>
-    );
+    )
 }
 
 export default Category;

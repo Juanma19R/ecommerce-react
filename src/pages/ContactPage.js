@@ -36,7 +36,7 @@ const ContactPage = () => {
                 Enviar
             </Button>
         </Container>
-    );
+    )
 }
 
 export default ContactPage;

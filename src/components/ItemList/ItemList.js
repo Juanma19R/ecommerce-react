@@ -19,10 +19,10 @@ const ItemList = ({products}) => {
                             category={product.category}
                         />
                     </div>
-                );
+                )
             })}
         </div>
-    );
+    )
 }
 
 export default ItemList;

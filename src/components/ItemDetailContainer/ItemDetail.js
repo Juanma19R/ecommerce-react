@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import React, { useEffect, useState } from "react"
 //Componentes
-import ItemCount from '../ItemCount/ItemCount'
 import { useCartContext } from '../../context/CartContext'
+import ItemCount from '../ItemCount/ItemCount'
 import HalfRating from '../HalfRating/HalfRating'
 import FloatingActionButtonSize from '../FavButton/FavButton'
 import LocalShippingIcon from '@mui/icons-material/LocalShipping'
@@ -67,7 +67,7 @@ const ItemDetail = ({item}) => {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
 export default ItemDetail;

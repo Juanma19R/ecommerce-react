@@ -1,18 +1,18 @@
 import { Link } from 'react-router-dom'
-//Componentes
 import { useCartContext } from '../../context/CartContext'
-import { FiShoppingBag } from 'react-icons/fi'
+//Componentes
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined'
 
 const CartWidget = () => {
     const { quantity, cartList } = useCartContext();
     return (
         <div>
             <Link to='/Cart'>          
-                <FiShoppingBag size={30}/>
+                <ShoppingBagOutlinedIcon fontSize="large" color="primary"/>
             </Link>
             { cartList.length > 0 && quantity() }
         </div>
-    );
+    )
 }
 
 export default CartWidget;

@@ -8,8 +8,6 @@ export function CartContextProvider({children}) {
 
     const [cartList, setCartList] = useState ([]);
 
-    console.log({cartList})
-
     function addToCart(item) {
         if (isInCart(item.id)) {
             const prod = cartList.find((p) => p.id === item.id);

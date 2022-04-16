@@ -4,7 +4,7 @@ import CategoryListContainer from "../components/CategoryListContainer/CategoryL
 const CategoryPage = () => {
     return (
         <CategoryListContainer />
-    );
+    )
 }
 
 export default CategoryPage;

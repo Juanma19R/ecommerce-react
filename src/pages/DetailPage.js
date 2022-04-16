@@ -10,7 +10,7 @@ const DetailPage = () => {
         <div className='container-general'> 
             <ItemDetailContainer id={id}/>
         </div>
-    );
+    )
 }
 
 export default DetailPage;

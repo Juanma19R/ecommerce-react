@@ -6,7 +6,7 @@ const HomePage = () => {
         <div> 
             <ItemListContainer />
         </div>
-    );
+    )
 }
 
 export default HomePage;

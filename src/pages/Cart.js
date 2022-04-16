@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
 //Componentes
 import { Button } from '@mui/material'
-import DeleteIcon from '@mui/icons-material/Delete';
+import IconButton from '@mui/material/IconButton'
+import Tooltip from '@mui/material/Tooltip'
+import DeleteIcon from '@mui/icons-material/Delete'
 import { useCartContext } from '../context/CartContext'
 
 //Table 
@@ -50,7 +52,13 @@ const CartWidget = () => {
                                 <TableCell>{prod.name}</TableCell>
                                 <TableCell align="right">{prod.quantity}</TableCell>
                                 <TableCell align="right">$ {prod.price}</TableCell>
-                                <TableCell align="right"><Button onClick={() => removeOne(prod.id)} startIcon={<DeleteIcon />}></Button></TableCell>
+                                <TableCell align="right">
+                                    <Tooltip title="Eliminar">
+                                        <IconButton onClick={() => removeOne(prod.id)}>
+                                            <DeleteIcon />
+                                        </IconButton>
+                                    </Tooltip>
+                                </TableCell>
                             </TableRow>
                         ))}
                         <TableRow>

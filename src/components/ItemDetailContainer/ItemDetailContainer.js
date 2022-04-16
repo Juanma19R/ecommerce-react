@@ -15,7 +15,7 @@ const ItemDetailContainer = ({id}) => {
     useEffect( () => {
         getProducts().then( (data) => {
             const itemFound = data.find(element => element.id == id)
-            setItem(itemFound)
+            setItem(itemFound);
         })
         return () => {
             setItem({});
@@ -33,7 +33,7 @@ const ItemDetailContainer = ({id}) => {
             </div>
             )}
         </>      
-    );
+    )
 }
 
 export default ItemDetailContainer;

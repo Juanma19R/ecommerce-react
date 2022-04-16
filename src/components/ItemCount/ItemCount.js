@@ -37,7 +37,7 @@ const ItemCount = ({ stock, initial, action }) => {
                 </div>
             </div>
         </>
-    );
+    )
 }
 
 export default ItemCount;

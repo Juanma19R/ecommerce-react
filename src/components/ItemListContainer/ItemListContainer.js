@@ -18,7 +18,7 @@ const ItemListContainer = () => {
     useEffect( () => {
         getProducts().then( (products) => {
             category ? setProducts( products.filter( (product) => product.category === category)):
-            setProducts(products)
+            setProducts(products);
         })
         return () => {
             setProducts({});
@@ -41,7 +41,7 @@ const ItemListContainer = () => {
             </div>
             )}
         </>   
-    );
+    )
 }
 
 export default ItemListContainer;

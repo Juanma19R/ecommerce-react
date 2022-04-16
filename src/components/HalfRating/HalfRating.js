@@ -7,5 +7,5 @@ export default function HalfRating() {
         <Stack spacing={1}>
             <Rating name="half-rating-read" defaultValue={3.5} precision={0.5} readOnly />
         </Stack>
-    );
+    )
 }

@@ -7,5 +7,5 @@ export default function FloatingActionButtonSize() {
         <Fab size="small" color="primary" aria-label="add">
             <FavoriteIcon />
         </Fab>
-    );
+    )
 }

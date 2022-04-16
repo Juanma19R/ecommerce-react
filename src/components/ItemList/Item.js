@@ -23,7 +23,7 @@ const Item = ({ name, pictureUrl, price, id, category }) => {
                 <Link to={`/item/${id}`} className="p-btn"><Button variant="outlined">Detalle</Button></Link>
             </div>
         </div>
-    );
+    )
 }
 
 export default Item;

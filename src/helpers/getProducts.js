@@ -1,11 +1,17 @@
-import { productList } from "../data/productListMock";
+//Base de datos
+import db from "../firebase"
+import { collection, getDocs } from "firebase/firestore"
 
-const getProducts = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(productList)
-        }, 2000);
-    })
+const getProducts = async () => {
+    const productosCollection = collection(db, 'productos');
+    const productosSnapshot = await getDocs(productosCollection);
+    const productosList = productosSnapshot.docs.map((doc) => {
+            let product = doc.data();
+            product.id = doc.id
+            return product
+        }
+    )
+    return productosList;
 }
 
 export default getProducts;
