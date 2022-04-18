@@ -1,6 +1,4 @@
 //Componentes
-import Container from '@mui/material/Container'
-import TextField from '@mui/material/TextField'
 import Button from '@mui/material/Button'
 import SendIcon from '@mui/icons-material/Send'
 
@@ -9,33 +7,26 @@ import './ContactPage.scss'
 
 const ContactPage = () => {
     return (
-        <Container className='container-form'> 
-            <h2>Contacto: </h2>
-            <form>
-                <TextField
-                id="standard-textarea"
-                label="Nombre y Apellido"
-                multiline
-                variant="standard"
-                />
-                <TextField
-                id="standard-textarea"
-                label="Email"
-                multiline
-                variant="standard"
-                />
-                <TextField
-                id="standard-multiline-static"
-                label="Mensaje"
-                multiline
-                rows={4}
-                variant="standard"
-                />
+        <div className="container">  
+            <form id="contact" action="" method="post">
+                <h3>¡Contactanos!</h3>
+                <h4>Contáctenos hoy y obtenga una respuesta en 24 horas</h4>
+                <fieldset>
+                    <input placeholder="Nombre" type="text"/>
+                </fieldset>
+                <fieldset>
+                    <input placeholder="Email" type="email"/>
+                </fieldset>
+                <fieldset>
+                    <textarea placeholder="Escriba aqui tu mensaje..."></textarea>
+                </fieldset>
+                <fieldset>
+                    <Button variant="contained" endIcon={<SendIcon />}>
+                        Enviar
+                    </Button>
+                </fieldset>
             </form>
-            <Button variant="contained" endIcon={<SendIcon />}>
-                Enviar
-            </Button>
-        </Container>
+        </div>
     )
 }
 

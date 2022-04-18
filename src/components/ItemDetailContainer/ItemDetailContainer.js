@@ -14,7 +14,7 @@ const ItemDetailContainer = ({id}) => {
 
     useEffect( () => {
         getProducts().then( (data) => {
-            const itemFound = data.find(element => element.id == id)
+            const itemFound = data.find(element => element.id === id)
             setItem(itemFound);
         })
         return () => {

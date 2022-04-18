@@ -1,12 +1,51 @@
-.container-form{
+.container{
+	max-width: 400px;
+	width: 100%;
+	margin: 0 auto;
+    margin-top: 50px;
+	position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    h2{
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    #contact{
+        background:#FFF;
         padding: 25px;
-    }
-    Button{
-        margin: 25px;
+        margin: 50px 0;
+        h3{
+            color: #1976d2;
+            display: block;
+            font-size: 40px;
+            font-weight: 400;
+        }
+        h4{
+            margin: 5px 0 15px;
+            display: block;
+            font-size: 17px;
+        }
+        fieldset{
+            border: medium none !important;
+            margin: 0 0 10px;
+            min-width: 100%;
+            padding: 0;
+            width: 100%;
+            input{
+                font-size: 20px;
+            }
+            textarea {
+                height: 100px;
+                max-width: 100%;
+                resize: none;
+                font-size: 20px;
+            }
+            Button{
+                width: 100%;
+                margin: 0 0 5px;
+                padding: 10px;
+                font-size: 15px;
+            }
+        }
     }
 }
