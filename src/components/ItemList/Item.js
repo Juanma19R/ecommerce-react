@@ -16,7 +16,7 @@ const Item = ({ name, pictureUrl, price, id, category }) => {
                 <span className="p-price">${price}</span>
             </div>
             <img src={pictureUrl} alt=""/>
-            <div className="p-desc" >
+            <div className="p-desc">
                 <h1 className="p-product">{name}</h1>
                 <h3 className="p-category">{category}</h3>
                 <HalfRating />
