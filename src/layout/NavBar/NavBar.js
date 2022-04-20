@@ -1,27 +1,35 @@
 import { Link } from 'react-router-dom' 
+import React, { useState, useEffect } from 'react'
 //Componentes
 import Logo from '../../assets/images/dark-logo-transparent.svg'
 import CartWidget from '../../components/CartWidget/CartWidget'
 import Button from '@mui/material/Button'
 
+//Base de datos
+import db from "../../firebase"
+import { collection, getDocs } from "firebase/firestore"
+
 //Estilos
 import './NavBar.scss'
 
-const pages = [
-    {
-        title:'Home',
-        url: '/'
-    },
-    {
-        title:'Categorias',
-        url: '/category'
-    }, 
-    {
-        title: 'Contacto',
-        url: '/contacto'
-    }];
-
 function NavBar() {
+
+    const [ pages, setPages ] = useState([]);
+
+    useEffect( () => {
+        getPages();
+    }, []);
+
+    const getPages = async () => {
+        const pagesCollection = collection(db, 'pages');
+        const pagesSnapshot = await getDocs(pagesCollection);
+        const pagesList = pagesSnapshot.docs.map((doc) => {
+                return doc.data();
+            }
+        )
+        setPages(pagesList);
+    }
+
     return (
         <header className='main-header'>
             <div className='container-logo'>
