@@ -6,6 +6,7 @@ import { Button } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import Modal from '../components/Modal/Modal'
 import IconButton from '@mui/material/IconButton'
+import VerificadoIcon from '../assets/images/verificacion.png'
 import Tooltip from '@mui/material/Tooltip'
 import DeleteIcon from '@mui/icons-material/Delete'
 
@@ -45,7 +46,7 @@ const CartWidget = () => {
                     price: cartList.price
                 }
             }),
-            total: totalAmount
+            total: totalAmount()
         }
     )
     const [successOrder, setSuccessOrder] = useState()
@@ -132,17 +133,19 @@ const CartWidget = () => {
                     </div>
                 }
             </div>
-            {console.log("Order:", order)}
             <Modal handleClose={() => setOpenModal(false)} open={openModal}>
-                
                 {successOrder ? (
                     <div>
                         <h3>Orden registrada</h3>
+                        <img src={VerificadoIcon} alt='icono de verificacion'/>
                         <p>Su numero de orden es: {successOrder}</p>
+                        <Link to='/'>
+                            <Button variant="outlined" onClick={emptyCart}>Aceptar</Button>
+                        </Link>
                     </div>
                 ) : (
                     <>
-                        <h2>FORM USUARIO</h2>
+                        <h2>Datos del usuario</h2>
                         <form onSubmit={handleSubmit}>
                             <div className='fieldset'>
                                 <TextField name='name' label='Nombre' 
@@ -151,13 +154,13 @@ const CartWidget = () => {
                                 />
                             </div>
                             <div className='fieldset'>
-                                <TextField type="number" name='phone' label='Telefono' 
+                                <TextField type="number" name='phone' label='Telefono/Celular' 
                                 onChange={handleChange} 
                                 value={formData.phone}
                                 />
                             </div>
                             <div className='fieldset'>
-                                <TextField type="mail" name='email' label='mail' 
+                                <TextField type="mail" name='email' label='Email' 
                                 onChange={handleChange} 
                                 value={formData.email}
                                 />
