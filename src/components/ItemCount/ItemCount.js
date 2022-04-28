@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 //Componentes
 import ButtonGroup from '@mui/material/ButtonGroup'
 import Button from '@mui/material/Button'
+import Tooltip from '@mui/material/Tooltip'
 
 //Estilos
 import './ItemCount.scss'
@@ -28,10 +29,13 @@ const ItemCount = ({ stock, initial, action }) => {
                 <div className='ButtonsGroup'>
                     <ButtonGroup variant="text" aria-label="text button group">
                         <Button onClick={removeProduct}>-</Button>
-                        <Button>{count}</Button>
+                        <Tooltip title='Cantidad'>
+                            <Button>{count}</Button>
+                        </Tooltip>
                         <Button onClick={addProduct}>+</Button>
                     </ButtonGroup>
                 </div>
+                <p className='availableStock'>Stock disponible: {stock}</p>
                 <div className='btnBuy'>
                     <Button variant="outlined" onClick={ (e) => action(e, count)}>Agregar al carrito</Button>
                 </div>

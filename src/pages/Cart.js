@@ -7,7 +7,7 @@ import { Button } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import Modal from '../components/Modal/Modal'
 import IconButton from '@mui/material/IconButton'
-import VerificadoIcon from '../assets/icons/verificacion.png'
+import Check from '../assets/images/check.gif'
 import Tooltip from '@mui/material/Tooltip'
 import DeleteIcon from '@mui/icons-material/Delete'
 
@@ -31,11 +31,12 @@ const CartWidget = () => {
 
     const { cartList, removeOne, emptyCart, totalAmount } = useCartContext();
     const [openModal, setOpenModal] = useState(false);
+    const [successOrder, setSuccessOrder] = useState();
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const [formData, setFormData] = useState({});
+
     const [order, setOrder] = useState(
         {
-            buyer : formData,
+            buyer : '',
             items: cartList.map( (cartList)=> {
                 return {
                     id: cartList.id,
@@ -47,46 +48,32 @@ const CartWidget = () => {
             total: totalAmount()
         }
     );
-    const [successOrder, setSuccessOrder] = useState();
 
-    const onSubmit = (e) => {
-        let prevOrder = {...order,
-            buyer: formData
-        }
-        setOrder({...order,
-            buyer: formData})
-        pushOrder(prevOrder)
+    const onSubmit = ( data ) => {
+        let prevOrder = { ...order, buyer: data }
+        setOrder({ ...order, buyer: data })
+        pushOrder( prevOrder )
     }
 
     const pushOrder = async (prevOrder) => {
         const orderFirebase = collection(db, 'ordenes')
         const orderDoc = await addDoc(orderFirebase, prevOrder)
-        console.log("orden generada: ", orderDoc.id)
         setSuccessOrder(orderDoc.id)
-    }
-
-    const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
-        })
     }
 
     return (
         <>
             <div className='Checkout-container'>
                     <h1>Carrito</h1>
-                {
-                    (cartList.length === 0)
-                    &&
+                { cartList.length === 0 ? (
+
                     <div className='NoItems-container'>
                         <p>¡No hay productos en el carrito!</p>
                         <Link to='/'>
                             <Button variant="outlined">Ver productos</Button>
                         </Link>
                     </div>
-                }
-                {
+                ) : (
                     <TableContainer component={Paper}>
                         <Table sx={{ minWidth: 700 }} aria-label="spanning table">
                             <TableHead>
@@ -120,20 +107,19 @@ const CartWidget = () => {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                }
-                {
-                    (cartList.length >= 1)
-                    &&
-                    <div className='btnVolver-container'>
-                        <Button variant="outlined" onClick={emptyCart}>Vaciar carrito</Button>
-                    </div>
+                )
+                        (cartList.length >= 1)
+                        &&
+                        <div className='btnVolver-container'>
+                            <Button variant="outlined" onClick={emptyCart}>Vaciar carrito</Button>
+                        </div>
                 }
             </div>
             <Modal handleClose={() => setOpenModal(false)} open={openModal}>
                 {successOrder ? (
                     <div>
                         <h3>Orden registrada</h3>
-                        <img src={VerificadoIcon} alt='icono de verificacion'/>
+                        <img src={Check} alt='icono de verificacion'/>
                         <p>Su numero de orden es: {successOrder}</p>
                         <Link to='/'>
                             <Button variant="outlined" onClick={emptyCart}>Aceptar</Button>
@@ -144,9 +130,9 @@ const CartWidget = () => {
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <h2>Datos del usuario</h2>
                             <div className='fieldset'>
-                                <TextField name='name' label='Nombre' 
-                                onChange={handleChange} 
-                                value={formData.name}
+                                <TextField
+                                name='name' 
+                                label='Nombre' 
                                 {...register("name", {
                                     required: {
                                         value: true,
@@ -161,9 +147,9 @@ const CartWidget = () => {
                                 {errors.name && <span className={errors.name && CartScss.messageError}>{errors.name.message}</span>}
                             </div>
                             <div className='fieldset'>
-                                <TextField type="mail" name='email' label='Email' 
-                                onChange={handleChange} 
-                                value={formData.email}
+                                <TextField
+                                name='email' 
+                                label='Email' 
                                 {...register("email", {
                                     required: {
                                         value: true,

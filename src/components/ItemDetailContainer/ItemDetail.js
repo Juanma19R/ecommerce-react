@@ -29,7 +29,6 @@ const ItemDetail = ({item}) => {
     useEffect( () => {
         if(counter > 0) {
             setShowItemCount(false);
-            console.log("Productos agregados al carrito: ", counter);
         }
     },[counter]);
     
