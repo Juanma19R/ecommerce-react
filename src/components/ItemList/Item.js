@@ -12,8 +12,8 @@ const Item = ({ name, pictureUrl, price, id, category }) => {
     return (
         <div className="p-box">
             <div className="p-top">
-                <FavoriteIcon />
-                <span className="p-price">${price}</span>
+                <FavoriteIcon/>
+                <span className="p-price">$ {price}</span>
             </div>
             <img src={pictureUrl} alt=""/>
             <div className="p-desc">

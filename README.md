@@ -3,19 +3,16 @@
 Nuestra web tiene la intención de acercarte la electronica a tu hogar, ¡Sin importar donde te encuentres!/
 Tu tienda online de confianza, donde encontras lo mejor en Laptops, Accesorios para tu pc y Monitores.
 
-## Explora la web
-
-Clic aquí, para ver nuestra web [Mision-TI](/https://juanma19r.github.io/ecommerce-react/)
-
 ## Tecnologías usadas
 
 - Visual Studio Code
-- React 
-- Javascript
+- ReactJS
+- Javascript(ES6)
 - Html5
 - Scss
 - npm
 - Mui
+- Firebase
 - Git & GitHub
 
 ## Screenshots Gif

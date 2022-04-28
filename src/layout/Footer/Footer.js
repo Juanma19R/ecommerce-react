@@ -4,7 +4,7 @@ import './Footer.scss'
 function Footer() {
     return (
         <footer>
-            <p>Sitio web creado por Ruggeri Juan Manuel</p>
+            <p>Ruggeri Juan Manuel | 2022</p>
         </footer>
     )
 }

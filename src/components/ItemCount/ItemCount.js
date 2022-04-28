@@ -8,7 +8,7 @@ import './ItemCount.scss'
 
 const ItemCount = ({ stock, initial, action }) => {
 
-    const [ count, setCount ] = useState(initial)
+    const [ count, setCount ] = useState(initial);
 
     const addProduct = () => {
         if(count < stock) {

@@ -6,9 +6,16 @@
     width: 100%;
     height: 100vh;
 }
-.categories-title{
+.title-category-container{
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding-top: 20px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #FFF;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }

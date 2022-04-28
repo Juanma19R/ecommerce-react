@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom'
 import React, { useState } from 'react'
+import { useForm } from "react-hook-form"
 //Componentes
 import { useCartContext } from '../context/CartContext'
 import { Button } from '@mui/material'
 import TextField from '@mui/material/TextField'
 import Modal from '../components/Modal/Modal'
 import IconButton from '@mui/material/IconButton'
-import VerificadoIcon from '../assets/images/verificacion.png'
+import VerificadoIcon from '../assets/icons/verificacion.png'
 import Tooltip from '@mui/material/Tooltip'
 import DeleteIcon from '@mui/icons-material/Delete'
 
@@ -24,17 +25,14 @@ import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 
 //Estilos
-import './Cart.scss'
+import CartScss from './Cart.scss'
 
 const CartWidget = () => {
 
     const { cartList, removeOne, emptyCart, totalAmount } = useCartContext();
-    const [openModal, setOpenModal] = useState(false)
-    const [formData, setFormData] = useState({
-        name: '',
-        phone: '',  
-        email: ''
-    })
+    const [openModal, setOpenModal] = useState(false);
+    const { register, handleSubmit, formState: { errors } } = useForm();
+    const [formData, setFormData] = useState({});
     const [order, setOrder] = useState(
         {
             buyer : formData,
@@ -48,11 +46,10 @@ const CartWidget = () => {
             }),
             total: totalAmount()
         }
-    )
-    const [successOrder, setSuccessOrder] = useState()
+    );
+    const [successOrder, setSuccessOrder] = useState();
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
+    const onSubmit = (e) => {
         let prevOrder = {...order,
             buyer: formData
         }
@@ -69,10 +66,9 @@ const CartWidget = () => {
     }
 
     const handleChange = (e) => {
-        const {value, name} = e.target
         setFormData({
             ...formData,
-            [name]: value
+            [e.target.name]: e.target.value
         })
     }
 
@@ -145,25 +141,41 @@ const CartWidget = () => {
                     </div>
                 ) : (
                     <>
-                        <h2>Datos del usuario</h2>
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                            <h2>Datos del usuario</h2>
                             <div className='fieldset'>
                                 <TextField name='name' label='Nombre' 
                                 onChange={handleChange} 
                                 value={formData.name}
+                                {...register("name", {
+                                    required: {
+                                        value: true,
+                                        message: "Necesitas llenar este campo."
+                                    },
+                                    minLength: {
+                                        value: 2,
+                                        message: "Ingresa tu nombre completo."
+                                    }
+                                })}
                                 />
-                            </div>
-                            <div className='fieldset'>
-                                <TextField type="number" name='phone' label='Telefono/Celular' 
-                                onChange={handleChange} 
-                                value={formData.phone}
-                                />
+                                {errors.name && <span className={errors.name && CartScss.messageError}>{errors.name.message}</span>}
                             </div>
                             <div className='fieldset'>
                                 <TextField type="mail" name='email' label='Email' 
                                 onChange={handleChange} 
                                 value={formData.email}
+                                {...register("email", {
+                                    required: {
+                                        value: true,
+                                        message: "Necesitas llenar este campo."
+                                    },
+                                    pattern: {
+                                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                                        message: "El formato no es el correcto."
+                                    }
+                                })}
                                 />
+                                {errors.email && <span className={errors.email && CartScss.messageError}>{errors.email.message}</span>}
                             </div>
                             <div className='fieldset'>
                                 <Button variant="contained" type="submit">Finalizar</Button>

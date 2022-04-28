@@ -5,9 +5,6 @@ import NavBar from './layout/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Footer from './layout/Footer/Footer'
 
-//Estilos
-import './scss/App.scss'
-
 //Paginas
 import HomePage from './pages/HomePage'
 import CategoryPage from './pages/CategoryPage'

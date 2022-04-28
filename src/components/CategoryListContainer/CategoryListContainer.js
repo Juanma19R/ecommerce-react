@@ -28,8 +28,12 @@ const CategoryListContainer = () => {
                 </Box>
             ) : (
             <div>
-                <h1 className="categories-title">Nuestras Categorías</h1>
-                <CategoryList categories={categories}/>
+                <div className="title-category-container">
+                    <h1>Nuestras Categorías</h1>
+                </div>
+                <div className="categories-container">
+                    <CategoryList categories={categories}/>
+                </div>
             </div>
             )}
         </>
