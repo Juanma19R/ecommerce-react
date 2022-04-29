@@ -37,4 +37,4 @@ Contacto\
 
 ## GIF navegación
 
-<img src="https://i.imgur.com/ih8WcHq.gif" alt="Gif de navegacion" width="400">
+<img src="https://media3.giphy.com/media/E0fcoRYHRhDKOWlUPu/giphy.gif?cid=790b76110e8747e1bfdc8bd51fba8161d2a9b78a3c29adf3&rid=giphy.gif&ct=g" alt="Gif de navegacion" width="400">
