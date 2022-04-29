@@ -15,7 +15,7 @@ Mi proyecto es una tienda online de productos electronicos desarrollada con Reac
 - Firebase
 - Git
 
-## Screenshots Gif
+## Screenshots
 
 Home\
 <img src ="https://i.imgur.com/ZP469K3.png" alt="Home " width="400"/>
@@ -37,4 +37,4 @@ Contacto\
 
 ## GIF navegación
 
-<img src="https://imgur.com/5CtYqxL" alt="Gif de navegacion" width="400">
+<img src="https://i.imgur.com/5CtYqxL.gif" alt="Gif de navegacion" width="400">
