@@ -107,13 +107,14 @@ const CartWidget = () => {
                             </TableBody>
                         </Table>
                     </TableContainer>
-                )
-                        (cartList.length >= 1)
+                )}
+                    <>
+                        {(cartList.length >= 1)
                         &&
                         <div className='btnVolver-container'>
                             <Button variant="outlined" onClick={emptyCart}>Vaciar carrito</Button>
-                        </div>
-                }
+                        </div>}
+                    </>
             </div>
             <Modal handleClose={() => setOpenModal(false)} open={openModal}>
                 {successOrder ? (

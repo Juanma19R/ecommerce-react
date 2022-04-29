@@ -1,7 +1,6 @@
-# Mision TI | Tu tienda online
+# Mision TI | Proyecto para el Curso de React JS de Coder House
 
-Nuestra web tiene la intención de acercarte la electronica a tu hogar, ¡Sin importar donde te encuentres!/
-Tu tienda online de confianza, donde encontras lo mejor en Laptops, Accesorios para tu pc y Monitores.
+Mi proyecto es una tienda online de productos electronicos desarrollada con React JS.
 
 ## Tecnologías usadas
 
@@ -10,26 +9,32 @@ Tu tienda online de confianza, donde encontras lo mejor en Laptops, Accesorios p
 - Javascript(ES6)
 - Html5
 - Scss
+- Flexbox y Grid
 - npm
 - Mui
 - Firebase
-- Git & GitHub
+- Git
 
 ## Screenshots Gif
 
 Home\
-<img src ="https://i.imgur.com/78GLuyO.png" alt="Home 1" width="400"/>\
-<img src ="https://i.imgur.com/yR059GI.png" alt="Home 2" width="400"/>
+<img src ="https://i.imgur.com/ZP469K3.png" alt="Home " width="400"/>
 
 Categorías\
-<img src ="https://i.imgur.com/F0pQzmX.png" alt="Categorias" width="400"/>
+<img src ="https://i.imgur.com/JEO5vyx.png" alt="Categorias" width="400"/>
 
-Categorías > Monitores\
-<img src ="https://i.imgur.com/0BsnCNB.png" alt="Categorias-Monitores" width="400"/>
+Categorías > Laptops\
+<img src ="https://i.imgur.com/O3WHyTN.png" alt="Categorias-Laptops" width="400"/>
 
 Detalle\
-<img src ="https://i.imgur.com/L8FPlyf.png" alt="Detalle" width="400"/>
+<img src ="https://i.imgur.com/IRvUyRQ.png" alt="Detalle" width="400"/>
+
+Carrito\
+<img src ="https://i.imgur.com/uGIWLbI.png" alt="Carrito" width="400"/>
+
+Contacto\
+<img src ="https://i.imgur.com/7xh2UUj.png" alt="Contacto" width="400"/>
 
 ## GIF navegación
 
-<img src="https://i.imgur.com/DtR1A8G.gif" alt="Gif de navegacion" width="400">
+<img src="https://imgur.com/5CtYqxL" alt="Gif de navegacion" width="400">
